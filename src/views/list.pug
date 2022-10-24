@@ -1,0 +1,16 @@
+doctype html
+html(lang = 'ru')
+    head
+        meta(charset = 'utf-8')
+        meta(name = 'viewport' content = 'width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name = 'description' content = '')
+        meta(name = 'author' content = '')
+        title FaceList
+    body
+        ul
+            each val in result
+                a(href='http://127.0.0.1:3001/cars/' + val.id)= val.name
+                h2= val.category.name
+                p
+                    b= val.description
+
